@@ -1,0 +1,17 @@
+# Vektorot so vreminja na cekanje
+waiting_times <- c(8, 4.1, 6.2, 7.3, 3.5, 4.2, 6.9, 7.0, 5.6, 8.2,
+                   4.7, 9.1, 7.6, 6.3, 5.4, 7.9, 8.5, 3.4, 6.8, 7.2,
+                   9.3, 6.1, 5.7, 8.9, 4.9, 2.7, 3.5, 4.2, 3.2, 3.9)
+
+# Funkcija za procenka na lambda so MLE
+estimate_lambda_mle <- function(data) {
+  # Lambda se procenuva kako 1/od aritmetickata sredina
+  lambda_hat <- 1 / mean(data)
+  return(lambda_hat)
+}
+
+# Presmetka na procenkata za lambda
+lambda_hat <- estimate_lambda_mle(waiting_times)
+
+# Prikaz na rezultatot
+cat("Procenkata na lambda (MLE) e:", lambda_hat, "\n")
